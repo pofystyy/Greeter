@@ -1,7 +1,5 @@
-class Greeter
-  def call(env)
-    [200, {"Content-Type" => "text/plain"}, ["Hello"]]
-  end
-end
+require "greeter"
+
+use Rack::Reloader, 0
 
 run Greeter.new
